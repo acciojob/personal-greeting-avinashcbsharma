@@ -7,7 +7,7 @@ const App = () => {
   return(
     <>
       <p>Enter your name:</p>
-      <input type='text' value={(name)}  onChange={e=>SetName(e.target.value )}/>
+      <input value={(name)}  onChange={e=>SetName(e.target.value )}/>
       {name ? <p>Hello {name}!</p> : null}
     </>
   )
