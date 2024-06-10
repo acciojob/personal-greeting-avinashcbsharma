@@ -1,13 +1,16 @@
-
-import React from "react";
+import React,{useState} from 'react'
 import './../styles/App.css';
 
 const App = () => {
-  return (
+  const [name, SetName] = useState('');
+  
+  return(
     <div>
-        {/* Do not remove the main div */}
+      <p>Enter your name:</p>
+      <input type='text' style={{padding:"10px"}} value={(name)}
+        onChange={e=>SetName(e.target.value )}/>
+      {name ? <p>Hello {name}!</p> : null}
     </div>
   )
 }
-
 export default App
