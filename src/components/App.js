@@ -5,12 +5,11 @@ const App = () => {
   const [name, SetName] = useState('');
   
   return(
-    <div>
+    <>
       <p>Enter your name:</p>
-      <input type='text' style={{padding:"10px"}} value={(name)}
-        onChange={e=>SetName(e.target.value )}/>
-      {name ? <p>Hello {name}</p> : null}
-    </div>
+      <input type='text' value={(name)}  onChange={e=>SetName(e.target.value )}/>
+      {name ? <p>Hello {name}!</p> : null}
+    </>
   )
 }
 export default App
